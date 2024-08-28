@@ -1,8 +1,3 @@
-네, 이해했습니다. RawData에서 필터를 적용한 후 보이는 숫자 값들을 선택하여 Report로 복사하는 기능을 추가하겠습니다. 이를 위해 pandas를 사용하여 데이터를 처리하고, 필터링된 결과를 사용자에게 보여준 후 선택할 수 있게 하겠습니다.
-
-다음은 수정된 스크립트입니다:
-
-```python
 import openpyxl
 import pandas as pd
 from openpyxl.utils import get_column_letter
@@ -140,26 +135,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
-
-이 수정된 스크립트의 주요 변경 사항은 다음과 같습니다:
-
-1. `select_data` 함수를 추가하여 필터링된 데이터를 사용자에게 보여주고, 원하는 특정 값을 선택할 수 있게 합니다.
-2. 사용자가 선택한 데이터는 `column_row` 형식의 키로 저장됩니다 (예: "Age_0"는 Age 열의 첫 번째 행 값).
-3. 데이터 매핑 시 선택한 데이터의 키를 사용합니다.
-
-사용 방법:
-1. 스크립트를 실행합니다.
-2. RawData 엑셀 파일 경로를 입력합니다.
-3. 사용할 시트 번호를 선택합니다.
-4. 필터 조건을 입력합니다 (예: "Age,>,30"). 필터링을 마치려면 빈 줄을 입력합니다.
-5. 필터링된 데이터가 표시됩니다. 복사할 데이터를 선택합니다 (예: "Age,0").
-6. 요약 레포트 파일 경로를 입력합니다.
-7. 데이터 매핑을 입력합니다 (예: "A1, Age_0").
-8. 매핑 입력을 마치려면 빈 줄을 입력합니다.
-
-이 스크립트를 사용하면 RawData에서 필터를 적용한 후 보이는 특정 숫자 값들을 선택하여 요약 레포트에 복사할 수 있습니다. 필요에 따라 추가적인 기능이나 수정이 필요하다면 말씀해 주세요.
-<!---
-Lewis75Kim/Lewis75Kim is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
